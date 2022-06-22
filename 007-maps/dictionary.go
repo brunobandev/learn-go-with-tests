@@ -3,14 +3,14 @@ package main
 type Dictionary map[string]string
 
 const (
-	ErrNotFound         = DictionatyErr("could not find the word you were looking for")
-	ErrWordExist        = DictionatyErr("cannot add word because it already exists")
-	ErrWordDoesNotExist = DictionatyErr("cannot update word because it does not exist")
+	ErrNotFound         = DictionaryErr("could not find the word you were looking for")
+	ErrWordExist        = DictionaryErr("cannot add word because it already exists")
+	ErrWordDoesNotExist = DictionaryErr("cannot update word because it does not exist")
 )
 
-type DictionatyErr string
+type DictionaryErr string
 
-func (e DictionatyErr) Error() string {
+func (e DictionaryErr) Error() string {
 	return string(e)
 }
 
